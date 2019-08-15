@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+    <style>
+        * {
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-container {
+            display: flex;
+        }
+
+        .row-container {
+            /* display: flex; */
+            justify-content: center;
+            flex: 4;
+            border: 1px solid black;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .null-box,
+        .menu {
+            flex: 2;
+        }
+
+        .fl-name {
+            display: flex;
+            margin-right: 35px;
+        }
+
+        .form-group {
+            width: 60%;
+            max-width: 50%;
+            margin-bottom: 1rem !important;
+        }
+
+        .input-control {
+            display: flex;
+            outline: none;
+            width: 90%;
+            height: calc(1.5em + .75rem + 2px);
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+        }
+
+        .label-control {
+            display: flex;
+            padding: 0 4px 8px;
+        }
+
+        .overlay-content {
+            list-style-type: none;
+            padding: 4px;
+        }
+
+        .overlay {
+            height: 100%;
+            width: 15%;
+            position: fixed;
+            z-index: 1;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, .9);
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #5c6166;
+            display: block;
+            transition: .3s;
+
+        }
+
+        li>a:hover {
+            background: rgb(11, 223, 64);
+        }
+
+        .menu {
+            display: flex;
+        }
+
+        .overlay a:hover,
+        .overlay a:focus {
+            color: white;
+        }
+
+        .span {
+            display: flex;
+        }
+
+        .icon {
+            color: black;
+            min-width: 50px;
+            padding: 7px;
+            text-align: center;
+            background: #e9ecef;
+            height: calc(1.5em + .75rem + 2px);
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+
+        .inn {
+            flex-basis: 76.5%;
+            border-right: none;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        @media (max-width: 800px) {
+            .inn {
+                flex-basis: 45.5%;
+            }
+        }
+
+        #myNav {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+
+        #myNav ul {
+            display: none;
+            margin: 0 0 0 -1px;
+            padding: 0;
+            list-style: none;
+            background: #2b2c2c;
+        }
+
+        #myNav ul a:hover {
+            text-decoration: none;
+        }
+
+        *html #myNav ul {
+            margin: 0 0 0 -2px;
+        }
+        ul li a:hover{
+            background: #495057;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="menu">
+            <div id="myNav" class="overlay">
+                <div class="overlay-content">
+                    <li><a href="#">خانه</a></li>
+                    <li><a href="#">داشبورد</a></li>
+                    <li><a href="#">کارتابل</a>
+                        <ul>
+                            <li><a href="#">Item 01</a></li>
+                            <li><a href="#">Item 02</a></li>
+                            <li><a href="#">Item 03</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">دبیرخانه</a></li>
+                    <li><a href="#">مکاتبات</a></li>
+                    <li><a href="#">جستجو</a></li>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row-container">
+
+            <div class="register-container">
+                <div class="nav-container">
+                    <img src="contact.png" alt="">
+                </div>
+                <div class="form-container">
+                    <div class="fl-name ">
+                        <div class="fname form-group">
+                            <label for="" class="label-control">نام</label>
+                            <input type="text" class="input-control">
+                        </div>
+                        <div class="lname form-group">
+                            <label for="" class="label-control">نام خانوادگی</label>
+                            <input type="text" class="input-control">
+                        </div>
+                    </div>
+                    <!-- ss -->
+                    <div class="fl-name ">
+                        <div class="fname form-group">
+
+                            <label for="" class="label-control">نام</label>
+                            <div class="span"><span class="icon">@</span>
+                                <input type="text" class="input-control inn"></div>
+
+                        </div>
+                        <div class="lname form-group">
+                            <label for="" class="label-control">نام خانوادگی</label>
+                            <input type="text" class="input-control">
+                        </div>
+                    </div>
+                    <div class="fl-name ">
+                        <div class="fname form-group">
+                            <label for="" class="label-control">نام</label>
+                            <input type="text" class="input-control">
+                        </div>
+                        <div class="lname form-group">
+                            <label for="" class="label-control">نام خانوادگی</label>
+                            <input type="text" class="input-control">
+                        </div>
+                    </div>
+                    <div class="fl-name ">
+                        <div class="fname form-group">
+                            <label for="" class="label-control">نام</label>
+                            <input type="text" class="input-control">
+                        </div>
+                        <div class="lname form-group">
+                            <label for="" class="label-control">نام خانوادگی</label>
+                            <input type="text" class="input-control">
+                        </div>
+                    </div>
+                    <div class="fl-name ">
+                        <div class="fname form-group">
+                            <label for="" class="label-control">نام</label>
+                            <input type="text" class="input-control">
+                        </div>
+                        <div class="lname form-group">
+                            <label for="" class="label-control">نام خانوادگی</label>
+                            <input type="text" class="input-control">
+                        </div>
+                    </div>
+                    <div class="fl-name ">
+                        <div class="fname form-group">
+                            <label for="" class="label-control">نام</label>
+                            <input type="text" class="input-control">
+                        </div>
+                        <div class="lname form-group">
+                            <label for="" class="label-control">نام خانوادگی</label>
+                            <input type="text" class="input-control">
+                        </div>
+                    </div>
+                    <div class="fl-name ">
+                        <div class="fname form-group">
+                            <label for="" class="label-control">نام</label>
+                            <input type="text" class="input-control">
+                        </div>
+                        <div class="lname form-group">
+                            <label for="" class="label-control">نام خانوادگی</label>
+                            <input type="text" class="input-control">
+                        </div>
+                    </div>
+                    <div class="fl-name ">
+                        <div class="fname form-group">
+                            <label for="" class="label-control">نام</label>
+                            <input type="text" class="input-control">
+                        </div>
+                        <div class="lname form-group">
+                            <label for="" class="label-control">نام خانوادگی</label>
+                            <input type="text" class="input-control">
+                        </div>
+                    </div>
+                    <div class="fl-name ">
+                        <div class="fname form-group">
+                            <label for="" class="label-control">نام</label>
+                            <input type="text" class="input-control">
+                        </div>
+                        <div class="lname form-group">
+                            <label for="" class="label-control">نام خانوادگی</label>
+                            <input type="text" class="input-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="null-box"></div>
+
+    </div>
+    <Script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#myNav li').hover(
+                function () {
+                    //show its submenu
+                    $('ul', this).slideDown(100);
+
+                },
+                function () {
+                    //hide its submenu
+                    $('ul', this).slideUp(100);
+                }
+            );
+
+        });
+    </Script>
+</body>
+
+</html>
